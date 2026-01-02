@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFK Fisher | Joki & Item Game</title>  <!-- SEO basic -->  <meta name="description" content="Joki & Item Game AFK. Aman, cepat, harga jelas. Order langsung via WhatsApp." />  <style>
+    :root {
+      --blue-main: #0ea5e9;
+      --blue-dark: #0f172a;
+      --blue-soft: #38bdf8;
+      --yellow: #facc15;
+      --green: #22c55e;
+      --gray: #e5e7eb;
+      --text-dark: #020617;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, var(--blue-main), var(--blue-dark));
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    /* CONTAINER */
+    .container {
+      max-width: 520px;
+      margin: auto;
+      padding: 18px 14px 100px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--blue-soft), var(--blue-main));
+      border-radius: 22px;
+      padding: 28px 20px;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,.35), transparent 55%);
+    }
+
+    .hero::after {
+      content: "🎣🐟";
+      position: absolute;
+      font-size: 80px;
+      opacity: 0.15;
+      bottom: -18px;
+      right: 10px;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      font-size: 14px;
+      margin-bottom: 18px;
+      opacity: .95;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-main {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(0,0,0,.25);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* TRUST BAR */
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background: #ffffff;
+      margin-top: 18px;
+      padding: 14px 10px;
+      border-radius: 18px;
+      font-size: 12px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+
+    /* SECTION */
+    .section {
+      background: #ffffff;
+      border-radius: 20px;
+      margin-top: 18px;
+      padding: 18px 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.14);
+    }
+
+    .section h2 {
+      font-size: 17px;
+      margin-bottom: 14px;
+      color: var(--blue-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* PRODUCT LIST */
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--gray);
+    }
+
+    .product:last-child { border-bottom: none; }
+
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .price {
+      font-weight: 800;
+      color: var(--blue-main);
+      font-size: 15px;
+    }
+
+    .badge {
+      background: var(--blue-main);
+      color: #ffffff;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-left: 6px;
+    }
+
+    /* ORDER FLOW */
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .flow div {
+      background: #f8fafc;
+      padding: 10px 6px;
+      border-radius: 14px;
+      border: 1px solid var(--gray);
+    }
+
+    /* FORMAT */
+    .format {
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 16px;
+      padding: 14px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    /* CTA BOTTOM */
+    .cta {
+      background: linear-gradient(180deg, var(--blue-main), var(--blue-dark));
+      color: #ffffff;
+      border-radius: 20px;
+      margin-top: 18px;
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.3);
+    }
+
+    .cta p {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .cta a {
+      display: block;
+      background: var(--green);
+      color: #ffffff;
+      padding: 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #cbd5f5;
+      margin-top: 22px;
+    }
+
+    /* FLOATING WA */
+    .wa-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: var(--green);
+      color: #ffffff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(0,0,0,.35);
+      z-index: 99;
+    }
+  </style></head>
+<body>  <div class="container"><!-- HERO -->
+<section class="hero">
+  <h1>🎮 AFK FISHER</h1>
+  <p>Joki & Item Game • Lempar kail, tunggu hasil 🎣</p>
+  <a class="cta-main" href="https://wa.me/6282146027302">ORDER VIA WHATSAPP</a>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div>⚡ Fast</div>
+  <div>🔒 Aman</div>
+  <div>🎮 Fokus Game</div>
+  <div>💬 Respon Cepat</div>
+</div>
+
+<!-- AFK -->
+<section class="section">
+  <h2>🎣 AFK SERVICE <span class="badge">Best Deal</span></h2>
+  <div class="product"><span class="product-name">AFK 1 Hari</span><span class="price">3K</span></div>
+  <div class="product"><span class="product-name">AFK 1 Minggu</span><span class="price">15K</span></div>
+  <div class="product"><span class="product-name">AFK 1 Bulan</span><span class="price">50K</span></div>
+</section>
+
+<!-- JOKI -->
+<section class="section">
+  <h2>🧑‍💻 JOKI</h2>
+  <div class="product"><span class="product-name">Joki Ghosfin</span><span class="price">40K</span></div>
+  <div class="product"><span class="product-name">Joki Ele</span><span class="price">65K</span></div>
+</section>
+
+<!-- ITEM -->
+<section class="section">
+  <h2>💎 ITEM</h2>
+  <div class="product"><span class="product-name">Kode RF</span><span class="price">19,5K</span></div>
+  <div class="product"><span class="product-name">Batu Enchant New</span><span class="price">1K</span></div>
+</section>
+
+<!-- FLOW -->
+<section class="section">
+  <h2>🧭 Cara Order</h2>
+  <div class="flow">
+    <div>1️⃣ Pilih Item</div>
+    <div>2️⃣ Klik WA</div>
+    <div>3️⃣ Proses</div>
+  </div>
+
+  <div class="format">
+    Format Order:<br>
+    • Item:<br>
+    • ID / Server:<br>
+    • Catatan:
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <p>Siap AFK? Kami yang mancing hasilnya 🎣</p>
+  <a href="https://wa.me/6282146027302">CHAT WHATSAPP SEKARANG</a>
+</section>
+
+<footer>
+  © 2026 AFK Fisher • Aktif 10.00 – 23.00 WIB
+</footer>
+
+  </div><a class="wa-float" href="https://wa.me/6282146027302">WhatsApp</a>
+
+</body>
+</html>
